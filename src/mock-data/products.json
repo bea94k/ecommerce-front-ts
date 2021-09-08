@@ -2,11 +2,43 @@
     {
         "id": 1,
         "name": "Men's Jersey",
-        "price": 45
+        "price": 45,
+        "categories": ["men", "fans", "players"]
     },
     {
         "id": 2,
         "name": "Skates",
-        "price": 85
+        "price": 85,
+        "categories": ["men", "women", "players"]
+    },
+    {
+        "id": 3,
+        "name": "Women's Jersey",
+        "price": 85,
+        "categories": ["fans", "women", "players"]
+    },
+    {
+        "id": 4,
+        "name": "Hat",
+        "price": 85,
+        "categories": ["men", "women", "fans"]
+    },
+    {
+        "id": 5,
+        "name": "Helmet",
+        "price": 85,
+        "categories": ["men", "women", "players"]
+    },
+    {
+        "id": 6,
+        "name": "Puck",
+        "price": 85,
+        "categories": ["players"]
+    },
+    {
+        "id": 7,
+        "name": "Kids' Jersey",
+        "price": 85,
+        "categories": ["kids", "fans", "players"]
     }
 ]
