@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ProductCard = ({productInfo}: ProductInfoProps): JSX.Element => {
-    console.log(productInfo.name, productInfo.categories)
     return (
         <div className="product-card">
             PRODUCT CARD

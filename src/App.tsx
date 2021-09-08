@@ -9,7 +9,6 @@ const App = (): JSX.Element => {
   return (
     <>
       <Navbar />
-      <h1>Henlo</h1>
       <Categories />
       <CategoryPage />
     </>
