@@ -1,6 +1,7 @@
 import React from 'react'
+import { Product } from './product'
 
-const ProductCard = ({productInfo}: ProductInfoProps): JSX.Element => {
+const ProductCard = ({productInfo}: ProductCardProps): JSX.Element => {
     return (
         <div className="product-card">
             PRODUCT CARD
@@ -11,13 +12,8 @@ const ProductCard = ({productInfo}: ProductInfoProps): JSX.Element => {
     )
 }
 
-type ProductInfoProps = {
-    productInfo: {
-        id: number,
-        name: string,
-        price: number,
-        categories: string[]
-    },
+type ProductCardProps = {
+    productInfo: Product;
     key: number
 }
 

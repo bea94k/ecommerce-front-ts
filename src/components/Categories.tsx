@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, MouseEvent } from 'react'
 import allProducts from '../mock-data/products.json'
 
-const Categories = (): JSX.Element => {
+const Categories = ({handleActiveCategoryChange}: CategoriesProps): JSX.Element => {
     const [allCategoriesArray, setAllCategoriesArray] = useState<string[]>([])
 
     useEffect(() => {
         const allCategories = new Set<string>() // since I want to collect categories without repetition
+        allCategories.add("all")
     
         allProducts.forEach(product => {
             product.categories.forEach(category => {
@@ -13,18 +14,25 @@ const Categories = (): JSX.Element => {
             })
         })
     
-        // for (let category of allCategories) console.log("iterating through Set", category)
         setAllCategoriesArray(Array.from(allCategories))
     }, [])
+
+    const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+        handleActiveCategoryChange(e.currentTarget.value)
+    }
 
 
     return (
         <div className="categories-list">
             {allCategoriesArray && allCategoriesArray.map((category, i) => 
-                <p key={i} className="category">{category}</p>
+                <button key={i} value={category} className="category" onClick={handleClick}>{category}</button>
             )}
         </div>
     )
+}
+
+type CategoriesProps = {
+    handleActiveCategoryChange: (newActiveCategory: string) => void
 }
 
 export default Categories
