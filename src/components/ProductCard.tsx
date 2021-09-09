@@ -3,7 +3,7 @@ import { Product } from './product'
 
 const ProductCard = ({productInfo}: ProductCardProps): JSX.Element => {
     return (
-        <div className="product-card">
+        <div className="product-card m1">
             PRODUCT CARD
             <p><strong>Name:</strong> {productInfo.name}</p>
             <p>(picture here)</p>

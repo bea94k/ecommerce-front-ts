@@ -15,8 +15,10 @@ const App = (): JSX.Element => {
   return (
     <>
       <Navbar />
-      <Categories handleActiveCategoryChange={handleActiveCategoryChange} />
-      <CategoryPage activeCategory={activeCategory} />
+      <div className="page-layout">
+        <Categories handleActiveCategoryChange={handleActiveCategoryChange} />
+        <CategoryPage activeCategory={activeCategory} />
+      </div>
     </>
   )
 }

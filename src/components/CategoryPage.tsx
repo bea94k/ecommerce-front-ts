@@ -31,10 +31,12 @@ const CategoryPage = ({activeCategory}: CategoryPageProps): JSX.Element => {
 
     return (
         <div>
-            <h2>Active category: {activeCategory}</h2> 
-            {productsToShow.map(product => 
-                <ProductCard key={product.id} productInfo={product}/>
-            )}
+            <h2 className="m1">Active category: {activeCategory}</h2> 
+            <div className="product-cards-wrap">
+                {productsToShow.map(product => 
+                    <ProductCard key={product.id} productInfo={product}/>
+                )}
+            </div>
         </div>
     )
 }

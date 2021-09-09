@@ -25,7 +25,7 @@ const Categories = ({handleActiveCategoryChange}: CategoriesProps): JSX.Element 
     return (
         <div className="categories-list">
             {allCategoriesArray && allCategoriesArray.map((category, i) => 
-                <button key={i} value={category} className="category" onClick={handleClick}>{category}</button>
+                <button key={i} value={category} className="category-btn" onClick={handleClick}>{category}</button>
             )}
         </div>
     )
